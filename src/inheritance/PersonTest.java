@@ -96,7 +96,7 @@ public class PersonTest {
             System.out.println(person);
         }
 
-        tester1.codes();
+        tester1.code();
         dancer1.dances();
         singer1.sings();
 
