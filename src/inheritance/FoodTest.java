@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class FoodTest {
     public static void main(String[] args) {
         /*
-        Create a food object and define below info for it
+        Create a food1 object and define below info for it
         taste = delicious
         name = sushi
         isSpicy = true
@@ -25,6 +25,7 @@ public class FoodTest {
         System.out.println(food1.name);
         System.out.println(food1.isOrganic());
         System.out.println(food1);
+
 
          /*
         Create a vegetable1 object and define below info for it
@@ -47,9 +48,10 @@ public class FoodTest {
         vegetable1.color = "green";
 
         System.out.println(vegetable1.name);
+        System.out.println(vegetable1.color);
         System.out.println(vegetable1.isOrganic());
-        System.out.println(vegetable1);
 
+        System.out.println(vegetable1);
 
         /*
         Create another vegetable2 object and define only the name,
@@ -60,14 +62,37 @@ public class FoodTest {
 
         Vegetable vegetable2 = new Vegetable();
         vegetable2.name = "broccoli";
-
         System.out.println(vegetable2);
+
+
+
+        /*
+        I have one Food object -> sushi
+        I have 2 Vegetable objects -> parsley, broccoli
+
+        Count and print how many elements in the list has a name that has more than 5 characters
+
+        RESULT:
+        2
+         */
 
         ArrayList<Food> allFoods = new ArrayList<>();
         allFoods.add(food1);
         allFoods.add(vegetable1);
         allFoods.add(vegetable2);
-//        allFoods.add("Strawberry"); // cannot add Stawberry because it not is the food
 
+
+        System.out.println("\n-------Count Task enhanced for loop solution--------\n");
+
+        int count = 0;
+        for(Food food: allFoods){
+            if(food.name.length() > 5) count++;
+        }
+
+        System.out.println(count);
+
+
+        System.out.println("\n-------Count Task BONUS solution--------\n");
+        System.out.println(allFoods.stream().filter(food -> food.name.length() > 5).count());
     }
 }
