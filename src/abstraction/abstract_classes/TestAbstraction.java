@@ -43,6 +43,8 @@ public class TestAbstraction {
         System.out.println("How many convertible phones = " + convertible);
         // HOW TO GET THE NAME OF MOST EXPENSIVE PHONE
         System.out.println("The most expensive phone is = " + mostExpensivePhone.getClass().getSimpleName());
+        System.out.println("The color of the most expensive phone is = " + mostExpensivePhone.color);
+
         System.out.println(IPhone.OS); // invoking static instance variables
         System.out.println(Samsung.OS); // invoking static instance variables
         System.out.println(Nokia.OS); // invoking static instance variables
